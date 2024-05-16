@@ -1,0 +1,28 @@
+name: al-quran-translation-and-tafsir
+version: 0.1.0
+summary: Al Quran Translation in 69 language and Tafsir in 6 language.
+description: Al Quran Translation in 69 language with 230+ books and Tafsir in 6 language with 30+ books of tafsir..
+
+confinement: strict
+base: core22
+grade: stable
+
+slots:
+  dbus-al-quran-translation-and-tafsir: # adjust accordingly to your app name
+    interface: dbus
+    bus: session
+    name: org.bar.al_quran_translation_and_tafsir # adjust accordingly to your app name and
+    
+apps:
+  al-quran-translation-and-tafsir:
+    command: al_quran_translation_and_tafsir
+    extensions: [gnome] # gnome includes the libraries required by flutter
+    plugs:
+    - network
+    slots:
+      - dbus-al-quran-translation-and-tafsir
+parts:
+  al-quran-translation-and-tafsir:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart # The main entry-point file of the application
