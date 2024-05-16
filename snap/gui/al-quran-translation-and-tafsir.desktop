@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Al Quran Qranslation And Tafsir
+Comment=Al Quran Translation in 69 language and Tafsir in 6 language.
+Exec=al-quran-translation-and-tafsir
+Icon=${SNAP}/meta/gui/al-quran-translation-and-tafsir.png # replace name to your app name
+Terminal=false
+Type=Application
+Categories=Education; #adjust accordingly your snap category
